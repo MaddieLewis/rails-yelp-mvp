@@ -7,29 +7,31 @@ restaurants_attributes = [
     name: 'Mildreds',
     address: 'Soho',
     phone_number: '123456789',
-    category: 'Vegetarian'
+    category: 'french'
   },
   {
     name: 'Wasabi',
     address: 'Liverpool Street',
     phone_number: '34835746543',
-    category: 'Sushi'
+    category: 'japanese'
   },
   {
     name: 'Pho',
     address: 'Kingston',
     phone_number: '485483753',
-    category: 'Vietnamese'
+    category: 'chinese'
   },
   {
     name: 'Buddha Bowl',
     address: 'Richmond',
     phone_number: '438473875',
-    category: 'Plant-based healthy'
+    category: 'italian'
   },
   {
     name: 'Wagamamas',
     address: 'Everywhere/omnipresent street',
     phone_number: '3782783',
-    category: 'Japanese'
+    category: 'japanese'
   }]
+Restaurant.create!(restaurants_attributes)
+puts 'Finished'
