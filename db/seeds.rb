@@ -32,6 +32,41 @@ restaurants_attributes = [
     address: 'Everywhere/omnipresent street',
     phone_number: '3782783',
     category: 'japanese'
-  }]
+  }
+]
 Restaurant.create!(restaurants_attributes)
+puts 'Finished restaurant seed'
+
+puts 'Cleaning database...'
+Review.destroy_all
+
+puts 'Creating reviews...'
+reviews_attributes = [
+  {
+    content: 'delicious',
+    rating: 2,
+    restaurant: Restaurant.last
+  },
+  {
+    content: 'delicious',
+    rating: 2,
+    restaurant: Restaurant.last
+  },
+  {
+    content: 'delicious',
+    rating: 2,
+    restaurant: Restaurant.last
+  },
+  {
+    content: 'delicious',
+    rating: 2,
+    restaurant: Restaurant.last
+  },
+  {
+    content: 'delicious',
+    rating: 2,
+    restaurant: Restaurant.last
+  }
+]
+Review.create!(reviews_attributes)
 puts 'Finished'

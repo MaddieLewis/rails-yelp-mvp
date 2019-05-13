@@ -3,4 +3,9 @@
   <p>address: <%= @restaurant.address %></p>
   <p>phone: <%= @restaurant.phone_number %></p>
   <p>cuisine: <%= @restaurant.category.capitalize %></p>
+  <p><%= link_to 'Back', restaurants_path, class: "btn btn-outline-dark" %>
+</p>
+<% @restaurant.reviews.each do |review| %>
+  <p><%= review.content %></p>
+<% end %>
 </div>

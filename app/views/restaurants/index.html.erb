@@ -1,7 +1,7 @@
 <div class="container" style="width: 70vw;">
   <% @restaurants.each do |restaurant| %>
     <div class="restaurant_card" style="padding: 16px; box-shadow: 1px 1px 4px 1px rgba(0,0,0,0.2); margin:16px;">
-      <h1><%= restaurant.name %></h1>
+      <h1><%= link_to restaurant.name, restaurant_path(restaurant), class: "btn btn-dark", style: "text-size: 48px;" %></h1>
       <h4 style="color: rgb(100,100,100)"><strong><%= restaurant.address %></strong></h4>
       <p><strong>Call them:</strong> <%= restaurant.phone_number %></p>
       <h4><%= restaurant.category.capitalize %></h4>
